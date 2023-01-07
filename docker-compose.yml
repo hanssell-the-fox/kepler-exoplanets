@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  fresh:
+    container_name: "fresh-kepler-api"
+    image: denoland/deno
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: deno task deploy
